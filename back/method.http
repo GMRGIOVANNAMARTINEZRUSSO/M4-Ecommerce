@@ -1,0 +1,36 @@
+###
+GET http://localhost:3000/users/orders
+Authorization: 
+
+###
+POST http://localhost:3000/users/register
+Content-Type: application/json
+token: autenticado
+
+{
+  "name": "John Doe",
+  "email": "john.doe@example.com",
+  "password": "securepassword",
+ "address": "123 Main St",
+  "phone": "555-1234"
+}
+
+###
+POST http://localhost:3000/users/login
+Content-Type: application/json
+
+{
+    "email": "john.doe@example.com",
+    "password": "ssecurepassword"
+}
+
+###
+POST http://localhost:3000/orders/
+Content-Type: application/json
+
+{
+   "userId" : 1,
+  "products": [1, 2, 3]
+}
+###
+GET http://localhost:3000/products
