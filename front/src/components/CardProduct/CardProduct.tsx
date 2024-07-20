@@ -1,19 +1,18 @@
-import React from 'react'
-import IProduct from '../../../../interfaces/IProduct';
+import React from 'react';
+import IProduct from '../../interfaces/IProduct';
 
-const Card: React.FC<IProduct> = ({
+const CardProduct: React.FC<IProduct> = ({
     id,
     name,
     description,
     price,
-    stock,
     image,
     categoryId }) => {
         
     return (
         <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <a href="#">
-                <img className="p-8 rounded-t-lg" src={image} alt="product image" />
+                <img className="p-8 rounded-t-lg" src={image} alt={name} />
             </a>
             <div className="px-5 pb-5">
                 <a href="#">
@@ -26,8 +25,7 @@ const Card: React.FC<IProduct> = ({
                 </div>
             </div>
         </div>
+    );
+};
 
-    )
-}
-
-export default Card
+export default CardProduct;

@@ -1,6 +1,7 @@
 ###
 GET http://localhost:3000/users/orders
 Authorization: 
+token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTcyMDQ4MjQ5MX0.DktrCQps1JyOpwNikqOFByn8wWyMLL8Xpn5M4M8JEyk"
 
 ###
 POST http://localhost:3000/users/register
@@ -21,12 +22,13 @@ Content-Type: application/json
 
 {
     "email": "john.doe@example.com",
-    "password": "ssecurepassword"
+    "password": "securepassword"
 }
 
 ###
 POST http://localhost:3000/orders/
 Content-Type: application/json
+Authorization: token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTcyMDQ4MjQ5MX0.DktrCQps1JyOpwNikqOFByn8wWyMLL8Xpn5M4M8JEyk"
 
 {
    "userId" : 1,
@@ -34,3 +36,6 @@ Content-Type: application/json
 }
 ###
 GET http://localhost:3000/products
+
+###
+GET http://localhost:3000/products/1

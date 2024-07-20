@@ -1,4 +1,4 @@
-    const productsToPreload = [
+    const productsPreload = [
         {
           id: 1,
           name: "iPhone 11",
@@ -57,4 +57,4 @@
       
   
 
-  export default productsToPreload
+  export default productsPreload
