@@ -1,13 +1,13 @@
 import Register from "@/components/Register/Register";
 
-const Page = () => {
-  const isLoggedIn = false;
+const RegisterPage = () => {
+  // const isLoggedIn = false;
 
   return (
     <div>
-       <Register />
+       <Register/>
     </div>
   );
 };
 
-export default Page;
+export default RegisterPage;

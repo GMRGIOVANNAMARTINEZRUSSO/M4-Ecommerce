@@ -17,21 +17,21 @@ export const navItems = [
         href: PATHROUTES.CONTACT,
         icon: "mail",
     },
-    {
-        title: "Cart",
-        href: PATHROUTES.CART,
-        icon: "cart"
-    },
-    {
-        title: "Login",
-        href: PATHROUTES.LOGIN,
-        icon: "login"
-    },
-    {
-        title: "Register",
-        href: PATHROUTES.REGISTER,
-        icon: "register"
-    }
+    // {
+    //     title: "Cart",
+    //     href: PATHROUTES.CART,
+    //     icon: "cart"
+    // },
+    // {
+    //     title: "Login",
+    //     href: PATHROUTES.LOGIN,
+    //     icon: "login"
+    // },
+    // {
+    //     title: "Register",
+    //     href: PATHROUTES.REGISTER,
+    //     icon: "register"
+    // }
 ];
 
 const socialMedia = [

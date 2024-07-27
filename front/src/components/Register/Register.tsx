@@ -5,7 +5,7 @@ import { validateRegisterForm } from '@/helpers/formValidation';
 import { RegisterUser } from '@/helpers/auth.helper';
 import { useRouter } from 'next/navigation';
 import PATHROUTES from '@/helpers/PathRoutes';
-const Register = () => {
+export const Register = () => {
   const router = useRouter();
     const [userData, setUserData] = useState<RegisterProps>({
         name: '',
@@ -37,7 +37,8 @@ const Register = () => {
       alert('Usuario registrado exitosamente')
       router.push(PATHROUTES.LOGIN)
     } catch (error:any) {
-      throw new Error(error);
+      console.error('Error al registrar el usuario:', error);
+      alert('Hubo un problema al registrar tu cuenta. Por favor, inténtalo de nuevo.');
     }
   };
  

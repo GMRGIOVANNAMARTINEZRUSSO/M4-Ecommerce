@@ -1,4 +1,5 @@
-    const productsPreload = [
+import IProduct from "../interfaces/IProduct";
+    const productsPreload : IProduct[]= [
         {
           id: 1,
           name: "iPhone 11",

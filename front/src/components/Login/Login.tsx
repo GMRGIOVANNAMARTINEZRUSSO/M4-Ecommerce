@@ -6,7 +6,8 @@ import { LoginUser } from '@/helpers/auth.helper';
 import { useAuth } from '@/context/AuthContext';
 import { useRouter } from 'next/navigation';
 import PATHROUTES from '@/helpers/PathRoutes';
-const Login = () => {
+import Link from 'next/link';
+export const Login = () => {
   const { dataUser, setDataUser } = useAuth();
   const router = useRouter();
 
@@ -90,7 +91,7 @@ const Login = () => {
           </button>
         </form>
       </div>
-      <p>¿No tienes una cuenta? <a href="/register">Registrate</a></p>
+      <p>¿No tienes una cuenta? <Link href={PATHROUTES.REGISTER}>Registrate</Link></p>
     </div>
   );
 };

@@ -1,11 +1,16 @@
+import Link from "next/link";
+import PATHROUTES from "../../helpers/PathRoutes";
 const Footer = () => {
   return (
-    <footer className="bg-white dark:bg-gray-900">
+    <footer className="relative bg-white shadow dark:bg-gray-800">
       <div className="container flex flex-col items-center justify-between p-6 mx-auto space-y-4 sm:space-y-0 sm:flex-row">
-        <a href="#">
-          <img className="w-auto h-7" src="" alt="" />
-        </a>
-        <p className="text-sm text-gray-600 dark:text-gray-300">Tienda Shop</p>
+      
+      <div className="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
+        <div className="flex items-center justify-between">
+          <Link href={PATHROUTES.HOME}>
+            <p>MY LITTLE STORE</p>
+          </Link>
+        </div>
         <p className="text-sm text-gray-600 dark:text-gray-300">© Copyright 2024. All Rights Reserved.</p>
 
         <div className="flex -mx-2">
@@ -15,6 +20,7 @@ const Footer = () => {
             </svg></a>
         </div>
       </div>
+    </div>
     </footer>
   );
 };

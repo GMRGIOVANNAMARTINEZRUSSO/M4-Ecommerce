@@ -8,9 +8,9 @@ import PATHROUTES from "@/helpers/PathRoutes";
 
 
 const ProductID = ({
-    params: { productID},
+    params: {id},
 }: {
-    params: { productID : string};
+    params: { id : string};
 }) => {
 
 const {dataUser}= useAuth();
@@ -18,7 +18,8 @@ const router = useRouter();
 const [productList, setProductList] = useState<IProduct>();
 
 const fetchData = async () => {
-      const product = await fetchProductById(productID);
+      const product = await fetchProductById(id);
+      console.log(product)
       setProductList(product);
     };
 
