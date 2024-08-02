@@ -44,3 +44,9 @@ export const LoginUser = async (userData: LoginProps) => {
         throw new Error(error);
     }
     }
+
+  
+export const logoutUser = () => {
+      localStorage.removeItem('userSession');
+    };
+  

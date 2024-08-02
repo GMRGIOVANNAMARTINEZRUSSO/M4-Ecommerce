@@ -1,17 +1,28 @@
-import React from "react"
-import Link from "next/link"
-import PATHROUTES from '@/helpers/PathRoutes'
+"use client";
+import React, { useEffect } from "react";
+import { useRouter } from "next/navigation";
+import PATHROUTES from '@/helpers/PathRoutes';
+
 const NotFound = () => {
-    return (
-        <div>
-            <section className="text-center">
-            <h3 className="text-3xl font-bold mb-6">UPS! 404 Page not found</h3>
-            <p> no te preocupes tenemos mas productos para ti</p>
-            <button className= "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-            <Link href={PATHROUTES.HOME}>Ir al home</Link>
-            </button>
-            </section>
-        </div>
-    )
-}
-export default NotFound
+  const router = useRouter();
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      router.push(PATHROUTES.HOME);
+    }, 5000);
+
+    return () => clearTimeout(timer); // Limpiar el timer si el componente se desmonta
+  }, [router]);
+
+  return (
+    <div className="bg-gray-100 flex items-center justify-center h-screen">
+      <section className="text-center bg-white p-8 rounded-lg shadow-md">
+        <h3 className="text-3xl font-semibold text-teal-900 mb-6">UPS! 404 Page not found</h3>
+        <p className="text-gray-700">Don't worry, we have more products for you.</p>
+        <p className="text-gray-500 mt-4">Redirecting to the homepage in 5 seconds...</p>
+      </section>
+    </div>
+  );
+};
+
+export default NotFound;

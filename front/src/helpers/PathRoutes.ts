@@ -5,8 +5,8 @@ const PATHROUTES ={
     LOGIN: "/auth/login",
     REGISTER: "/auth/register",
     PRODUCTID: (id: number | string) => `/products/${id}`,
+    PRODUCTS: "/products",
     DASHBOARD: "/dashboard",
-    SHOP: "/shop",
     CART: "/dashboard/cart"
 }
 export default PATHROUTES
