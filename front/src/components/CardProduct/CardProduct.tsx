@@ -14,7 +14,7 @@ const CardProduct: React.FC<IProduct> = ({
   stock,
   categoryId }) => {
 
-    const { dataUser } = useAuth();
+ const { dataUser, updateCart } = useAuth();
 
     const handleAddToCart = () => {
       if (!dataUser?.token) {
@@ -33,6 +33,7 @@ const CardProduct: React.FC<IProduct> = ({
           alert("Product added to cart");
         }
       }
+      updateCart();
     };
 
 
@@ -40,7 +41,7 @@ const CardProduct: React.FC<IProduct> = ({
   return (
     <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
       <div className="relative w-full h-48">
-        {/* Usa Image de Next.js si está disponible */}
+        
         <Image
           src={image}
           alt={`Imagen del producto ${name}`}

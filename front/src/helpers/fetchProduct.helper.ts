@@ -21,22 +21,18 @@ export const fetchProducts = async () => {
 const findProductById = async (product : IProduct[], producId: number) => {
     const productsId= product.find
     ((product) => product.id === producId)
-    console.log(productsId)
     return productsId
 
 }
 
 export const fetchProductById = async (id: string) => {
     const producId = Number(id)
-    console.log(id)
     try {
         const products = await fetchProducts();
-        console.log(products)
        if (products.length === 0) {
            throw new Error('Products not found');
        }
         const product = await findProductById(products, producId);
-         console.log(product)
         if (!product) {
             throw new Error('Product not found');
         }

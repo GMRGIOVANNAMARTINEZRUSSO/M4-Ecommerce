@@ -1,3 +1,6 @@
+import NotFound from "@/app/not-found"
+import { NOTFOUND } from "dns"
+
 const PATHROUTES ={
     HOME: "/",
     ABOUT: "/about",
@@ -7,6 +10,7 @@ const PATHROUTES ={
     PRODUCTID: (id: number | string) => `/products/${id}`,
     PRODUCTS: "/products",
     DASHBOARD: "/dashboard",
-    CART: "/dashboard/cart"
+    CART: "/dashboard/cart",
+    NOTFOUND: "/not-found",
 }
 export default PATHROUTES

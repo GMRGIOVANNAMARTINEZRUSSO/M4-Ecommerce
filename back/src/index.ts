@@ -6,13 +6,13 @@ import { preLoadCategories } from "./helpers/preLoadCategories";
 import { preLoadProducts } from "./helpers/preLoadProducts";
 
 const initialize = async () => {
-    console.log("Initializing server");
+    console.info("Initializing server");
     await AppDataSource.initialize();
-    console.log("Database initialized");
+    console.info("Database initialized");
     await preLoadCategories();
     await preLoadProducts();
     app.listen(PORT, () => {
-        console.log(`Server running on port ${PORT}`);
+        console.info(`Server running on port ${PORT}`);
     });
 }
 

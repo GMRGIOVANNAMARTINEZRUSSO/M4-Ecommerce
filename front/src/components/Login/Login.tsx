@@ -45,14 +45,13 @@ export const Login = () => {
   useEffect(() => {
     const errors = validateLoginForm(userData);
     setErrorUser(errors);
-    console.log(errorUser);
   }, [userData]);
 
   return (
     <div className="flex justify-center items-center h-screen bg-gray-100">
       <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50" role="dialog" aria-modal="true">
         <div className="w-full max-w-md bg-white rounded-lg shadow-md p-8 relative">
-          <button 
+          <button
             className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
             onClick={() => router.push(PATHROUTES.HOME)}
             aria-label="Close"
@@ -69,7 +68,7 @@ export const Login = () => {
                 id="email-address"
                 name="email"
                 value={userData.email}
-                placeholder='user@example.com'
+                placeholder="user@example.com"
                 onChange={handleChange}
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                 required
@@ -84,7 +83,7 @@ export const Login = () => {
                 id="password"
                 name="password"
                 value={userData.password}
-                placeholder='******'
+                placeholder="******"
                 onChange={handleChange}
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                 required
@@ -92,11 +91,12 @@ export const Login = () => {
               {errorUser.password && <p className="font-light text-xs text-red-500">{errorUser.password}</p>}
             </div>
 
-            <button type="submit" className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+            <button type="submit"
+              className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide transition duration-200 rounded-lg shadow-md bg-blue-600 hover:bg-blue-700 text-white focus:shadow-outline focus:outline-none cursor-pointer">
               Login to your account
             </button>
 
-            <p className="text-sm text-gray-500 mt-4">don't have an account? <Link href={PATHROUTES.REGISTER} className="text-blue-500 hover:underline">Register</Link></p>
+            <p className="text-sm text-gray-500 mt-4">don&apos;t have an account? <Link href={PATHROUTES.REGISTER} className="text-blue-500 hover:underline">Register</Link></p>
           </form>
         </div>
       </div>
@@ -105,3 +105,4 @@ export const Login = () => {
 };
 
 export default Login;
+

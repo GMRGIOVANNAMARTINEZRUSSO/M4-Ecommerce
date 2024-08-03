@@ -21,5 +21,4 @@ const categoriesToPreLoad: ICategory[] = [
 export const preLoadCategories = async () => {
     const categories = await CategoryRepository.find();
     if (!categories.length) await AppDataSource.createQueryBuilder().insert().into(Category).values(categoriesToPreLoad).execute();
-    console.log('Categories preloaded');
 }

@@ -1,7 +1,8 @@
+import { title } from "process";
 import PATHROUTES from "./PathRoutes";
 
 
-export const navItems = [
+export const navItemsPublic = [
     {
         title: "Home",
         href: PATHROUTES.HOME,
@@ -25,33 +26,47 @@ export const navItems = [
 
 ];
 
-const socialMedia = [
+export const navItemsPrivate= [
     {
-        name: "Facebook",
-        href: "https://facebook.com",
-        icon: "facebook",
+        title: "Home",
+        href: PATHROUTES.HOME,
+        icon: "home",
     },
     {
-        name: "Instagram",
-        href: "https://instagram.com",
-        icon: "instagram",
-    },
-    {
-        name: "Twitter",
-        href: "https://twitter.com",
-        icon: "twitter",
+        title: "Products",
+        href: PATHROUTES.PRODUCTS,
+        icon: "products"
     },
 ];
 
 export const navItemsLogged = [
     {
 
-        name: "Profile",
+        title: "Profile",
         path: PATHROUTES.DASHBOARD,
     },
     {
-        name: "Cart",
+        title: "Cart",
         path: PATHROUTES.CART,
 
    }
 ]
+
+// const socialMedia = [
+//     {
+//         name: "Facebook",
+//         href: "https://facebook.com",
+//         icon: "facebook",
+//     },
+//     {
+//         name: "Instagram",
+//         href: "https://instagram.com",
+//         icon: "instagram",
+//     },
+//     {
+//         name: "Twitter",
+//         href: "https://twitter.com",
+//         icon: "twitter",
+//     },
+// ];
+

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import Link from 'next/link';
 import PATHROUTES from '@/helpers/PathRoutes';
@@ -39,12 +40,12 @@ const HomeContainer = () => {
             <Link href={PATHROUTES.PRODUCTS}>
               <div className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide transition duration-200 rounded-lg shadow-md bg-blue-600 hover:bg-blue-700 text-white focus:shadow-outline focus:outline-none cursor-pointer">
               {/* "w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center" */}
-                Products {/* Color secundario: 30% */}
+                Products 
               </div>
             </Link>
             <Link href={PATHROUTES.REGISTER}>
               <div className="inline-flex items-center font-semibold transition-colors duration-200 rounded-lg text-blue-600 hover:text-blue-800 cursor-pointer">
-                Register {/* Color secundario: 30% */}
+                Register
               </div>
             </Link>
           </div>
@@ -60,7 +61,7 @@ const HomeContainer = () => {
       
       <section className="py-20 bg-white text-center">
         <h2 className="text-2xl font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
-          Most Purchased Products {/* Color de acento: 10% */}
+          Most Purchased Products
         </h2>
         <div className="flex justify-center flex-wrap gap-8">
           {products.slice(0, 3).map((product) => (

@@ -9,9 +9,9 @@ Content-Type: application/json
 token: autenticado
 
 {
-  "name": "John Doe",
-  "email": "john2@example.com",
-  "password": "securepassword",
+  "name": "gio m",
+  "email": "gio@mail.com",
+  "password": "123456",
  "address": "123 Main St",
   "phone": "555-1234"
 }
@@ -21,19 +21,20 @@ POST http://localhost:3000/users/login
 Content-Type: application/json
 
 {
-    "email": "john.doe@example.com",
-    "password": "securepassword"
+    "email": "gio@mail.com",
+    "password": "123456"
 }
 
 ###
 POST http://localhost:3000/orders/
 Content-Type: application/json
-Authorization: token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTcyMDQ4MjQ5MX0.DktrCQps1JyOpwNikqOFByn8wWyMLL8Xpn5M4M8JEyk"
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTcyMjA5MzU0MH0.x0eg9f3Ek_ExDttsudf9tpYosjGLJwKn0-0yGAkoVc0
 
 {
    "userId" : 1,
   "products": [1, 2, 3]
 }
+
 ###
 GET http://localhost:3000/products
 

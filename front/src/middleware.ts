@@ -8,14 +8,12 @@ export const middleware: NextMiddleware = async (request) => {
  
   //chequeamos si está autenticado
   const isAuthenticated = checkUserAuthentication(request);
-  // console.log("isAuthenticated", isAuthenticated);
+ 
   // Redirigimos a la página del home si el usuario no está autenticado
   if (pathname.startsWith(PATHROUTES.DASHBOARD || PATHROUTES.CART) && !isAuthenticated) {
     const url = new URL(PATHROUTES.LOGIN, request.url);
     return NextResponse.redirect(url);
   }
-
- 
 
   return NextResponse.next();
 };
@@ -34,7 +32,6 @@ function checkUserAuthentication(request: NextRequest) {
 //     return NextResponse.redirect(new URL("/auth/login", request.url));
 //   }
 
-//   console.log("running middleware");
 //   return NextResponse.next();
 // }
 

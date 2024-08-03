@@ -15,8 +15,6 @@ const checkLogin = async (req: Request, res: Response, next: NextFunction) => {
   } catch (error) {
     next(new ClientError("Invalid token"));
   }
-  console.log("Token Check OK");
-
   next();
 };
 

@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useState } from "react";
 import { useAuth } from "@/context/AuthContext";
-import { navItems } from "@/helpers/navItems.helper";
+import { navItemsPublic, navItemsPrivate } from "@/helpers/navItems.helper";
 import PATHROUTES from "@/helpers/PathRoutes";
 import Link from "next/link";
 import { useRouter } from 'next/navigation';
@@ -9,15 +9,18 @@ import { logoutUser } from '@/helpers/auth.helper';
 import IProduct from '@/interfaces/IProduct';
 
 const Navbar = () => {
-  const { dataUser, setDataUser } = useAuth();
+  const { dataUser, setDataUser, cartItemCount } = useAuth();
   const router = useRouter();
-  const [cartItemCount, setCartItemCount] = useState<number>(0);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+
+
 
   useEffect(() => {
     const cart = localStorage.getItem("cart");
     if (cart) {
       const items: IProduct[] = JSON.parse(cart);
-      setCartItemCount(items.length);
+      // setCartItemCount(items.length);
     }
   }, []);
 
@@ -28,6 +31,8 @@ const Navbar = () => {
     setDataUser(null);
     router.push(PATHROUTES.HOME);
   };
+
+  const navItems = dataUser ? navItemsPrivate : navItemsPublic;
 
   return (
     <nav className="relative bg-white shadow dark:bg-gray-800">
@@ -73,7 +78,7 @@ const Navbar = () => {
               <li key={"dashboard"} className="flex-1">
                 <Link href={PATHROUTES.DASHBOARD}
                   className="inline-flex items-center font-semibold transition-colors duration-200 rounded-lg text-blue-600 hover:text-blue-800 cursor-pointer">
-                    My Profile
+                     Profile
                 </Link>
               </li>
 

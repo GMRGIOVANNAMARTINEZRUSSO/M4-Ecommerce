@@ -11,7 +11,6 @@ import { IOrder } from '@/interfaces/IOrder';
 const Dashboard = () => {
   const [orders, setOrders] = useState<IOrder[]>([]);
   const { dataUser } = useAuth();
-  console.log(orders);
 
   useEffect(() => {
     const fetchData = async () => {

@@ -9,7 +9,7 @@ import PATHROUTES from '@/helpers/PathRoutes';
 const CartPage = () => {
   const [cart, setCart] = useState<IProduct[]>([]);
   const [total, setTotal] = useState<number>(0);
-  const { dataUser } = useAuth();
+  const { dataUser,  updateCart } = useAuth();
 
   useEffect(() => {
     const storedCart = JSON.parse(localStorage.getItem('cart') || '[]');
@@ -31,6 +31,7 @@ const CartPage = () => {
     setCart([]);
     setTotal(0);
     localStorage.removeItem('cart');
+    updateCart();
   };
 
   const handleRemoveProduct = (productId: number) => {
@@ -40,6 +41,8 @@ const CartPage = () => {
     setCart(updatedCart);
     setTotal(updatedTotal);
     localStorage.setItem("cart", JSON.stringify(updatedCart));
+    updateCart();
+
   };
 
   return (
@@ -58,7 +61,7 @@ const CartPage = () => {
                   <p className="text-lg font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">${product.price.toFixed(2)}</p>
                 </div>
                 <button className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide transition duration-200 rounded-lg shadow-md bg-blue-600 hover:bg-blue-700 text-white focus:shadow-outline focus:outline-none cursor-pointer"
-                onClick={() => handleRemoveProduct(product.id)} >Delete</button>
+                  onClick={() => handleRemoveProduct(product.id)} >Delete</button>
               </div>
             ))
           )}
@@ -71,13 +74,6 @@ const CartPage = () => {
             onClick={handleCheckout}>  Place Order
           </button>
 
-          {/*           
-          <Link
-            href={PATHROUTES.CART}
-            className="inline-block bg-blue-700 text-white font-bold py-2 px-6 rounded-lg shadow-md hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-          >
-            View Cart
-          </Link> */}
         </div>
       </div>
     </div>

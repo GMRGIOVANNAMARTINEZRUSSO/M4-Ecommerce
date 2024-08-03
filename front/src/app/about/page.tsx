@@ -1,46 +1,51 @@
+"use client";
 import Link from 'next/link';
 import React from 'react';
 import PATHROUTES from '@/helpers/PathRoutes';
 
 const AboutUs = () => {
     return (
-        <div className="bg-gray-100 py-12">
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 className="text-3xl font-extrabold text-gray-900 mb-6">Sobre Nosotros</h2>
+        <div className="bg-gray-100 min-h-screen flex flex-col items-center justify-center p-6">
+            <div className="p-6 max-w-md mx-auto bg-white rounded-lg shadow-md space-y-4 mb-6">
+                <h2 className="text-2xl font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">About Us</h2>
+                <p className="text-base text-gray-700 md:text-lg">
+                    At MY LITTLE STORE, our mission is to offer the best electronic products with a focus on quality, innovation, and exceptional customer service. We believe in enhancing our customers&#39; lives through technology and complete satisfaction.
+                </p>
+            </div>
 
-                <div className="bg-white shadow-md rounded-lg p-8">
-                    <h3 className="text-2xl font-bold text-gray-800 mb-4">Nuestra Misión</h3>
+            <div className="flex w-full max-w-6xl space-x-6">
+                <div className="flex-1 bg-white rounded-lg shadow-md p-8">
+                    <h2 className="text-2xl font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400 mb-6">Our Mission</h2>
                     <p className="text-base text-gray-700 mb-6">
-                        En MY LITTLE STORE, nuestra misión es ofrecer los mejores productos electrónicos con un enfoque en la calidad, la innovación y el servicio al cliente excepcional. Creemos en mejorar la vida de nuestros clientes mediante la tecnología y la satisfacción completa.
+                        At MY LITTLE STORE, our mission is to offer the best electronic products with a focus on quality, innovation, and exceptional customer service. We believe in enhancing our customers&#39; lives through technology and complete satisfaction.
                     </p>
+                </div>
 
-                    <h3 className="text-2xl font-bold text-gray-800 mb-4">Nuestro Equipo</h3>
-                    <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="flex-1 bg-white rounded-lg shadow-md p-8">
+                    <h2 className="text-2xl font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400 mb-6">Our Team</h2>
+                    <div className="space-y-4">
                         <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-md">
-                            <img src="https://via.placeholder.com/150" alt="Miembro del equipo" className="w-24 h-24 rounded-full mx-auto mb-4" />
-                            <h4 className="text-xl font-semibold text-gray-800 mb-2">Juan Pérez</h4>
-                            <p className="text-gray-600">CEO y Fundador</p>
+                            <h4 className="text-xl font-semibold text-gray-800 mb-2">John Smith</h4>
+                            <p className="text-gray-600">CEO & Founder</p>
                         </div>
                         <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-md">
-                            <img src="https://via.placeholder.com/150" alt="Miembro del equipo" className="w-24 h-24 rounded-full mx-auto mb-4" />
-                            <h4 className="text-xl font-semibold text-gray-800 mb-2">María Gómez</h4>
-                            <p className="text-gray-600">Directora de Marketing</p>
+                            <h4 className="text-xl font-semibold text-gray-800 mb-2">Mary Johnson</h4>
+                            <p className="text-gray-600">Marketing Director</p>
                         </div>
                         <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-md">
-                            <img src="https://via.placeholder.com/150" alt="Miembro del equipo" className="w-24 h-24 rounded-full mx-auto mb-4" />
-                            <h4 className="text-xl font-semibold text-gray-800 mb-2">Carlos Ruiz</h4>
-                            <p className="text-gray-600">Desarrollador Principal</p>
+                            <h4 className="text-xl font-semibold text-gray-800 mb-2">Charles Brown</h4>
+                            <p className="text-gray-600">Lead Developer</p>
                         </div>
-                    </div>
-
-                    <div className="mt-8 text-center">
-                        <Link href={PATHROUTES.CONTACT}>
-                            <div className="inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                                Contáctanos
-                            </div>
-                        </Link>
                     </div>
                 </div>
+            </div>
+
+            <div className="mt-8 text-center">
+                <Link href={PATHROUTES.CONTACT}>
+                    <div className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide transition duration-200 rounded-lg shadow-md bg-blue-600 hover:bg-blue-700 text-white focus:shadow-outline focus:outline-none cursor-pointer">
+                        Contact Us
+                    </div>
+                </Link>
             </div>
         </div>
     );
