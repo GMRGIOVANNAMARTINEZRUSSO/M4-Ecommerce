@@ -3,13 +3,12 @@ import IProduct from '@/interfaces/IProduct';
 import { useEffect, useState } from 'react';
 import { useAuth } from '@/context/AuthContext';
 import { createOrder } from '@/helpers/orders.helper';
-import Link from 'next/link';
-import PATHROUTES from '@/helpers/PathRoutes';
+
 
 const CartPage = () => {
   const [cart, setCart] = useState<IProduct[]>([]);
   const [total, setTotal] = useState<number>(0);
-  const { dataUser,  updateCart } = useAuth();
+  const { dataUser, updateCart } = useAuth();
 
   useEffect(() => {
     const storedCart = JSON.parse(localStorage.getItem('cart') || '[]');

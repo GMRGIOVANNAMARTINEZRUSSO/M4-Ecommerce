@@ -1,7 +1,4 @@
-import NotFound from "@/app/not-found"
-import { NOTFOUND } from "dns"
-
-const PATHROUTES ={
+export const PATHROUTES = {
     HOME: "/",
     ABOUT: "/about",
     CONTACT: "/contact",

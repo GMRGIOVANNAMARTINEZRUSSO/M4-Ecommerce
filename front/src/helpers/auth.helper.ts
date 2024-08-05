@@ -11,10 +11,10 @@ export const RegisterUser = async (userData: RegisterProps) => {
             },
             body: JSON.stringify(userData),
         });
-        // return response.json();
-        if(response.ok){
+
+        if (response.ok) {
             return response.json();
-        }else {
+        } else {
             alert('Error al registrar el usuario')
             throw new Error('Error al registrar el usuario');
         }
@@ -32,21 +32,20 @@ export const LoginUser = async (userData: LoginProps) => {
             },
             body: JSON.stringify(userData),
         });
-      
-        if(response.ok){
+
+        if (response.ok) {
             return response.json();
-        }else {
+        } else {
             alert('Error al logear el usuario')
             throw new Error('Error al logear el usuario');
         }
-        
+
     } catch (error: any) {
         throw new Error(error);
     }
-    }
+}
 
-  
+
 export const logoutUser = () => {
-      localStorage.removeItem('userSession');
-    };
-  
+    localStorage.removeItem('userSession');
+};

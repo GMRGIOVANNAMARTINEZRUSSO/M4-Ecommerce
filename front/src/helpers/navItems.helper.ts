@@ -1,4 +1,3 @@
-import { title } from "process";
 import PATHROUTES from "./PathRoutes";
 
 
@@ -52,21 +51,4 @@ export const navItemsLogged = [
    }
 ]
 
-// const socialMedia = [
-//     {
-//         name: "Facebook",
-//         href: "https://facebook.com",
-//         icon: "facebook",
-//     },
-//     {
-//         name: "Instagram",
-//         href: "https://instagram.com",
-//         icon: "instagram",
-//     },
-//     {
-//         name: "Twitter",
-//         href: "https://twitter.com",
-//         icon: "twitter",
-//     },
-// ];
 

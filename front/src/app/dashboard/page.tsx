@@ -1,9 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from 'react';
-import PATHROUTES from '@/helpers/PathRoutes';
 import { useAuth } from '@/context/AuthContext';
-import Link from 'next/link';
 import { getOrders } from '@/helpers/orders.helper';
 import CardOrder from '@/components/CardOrder/CardOrder';
 import { IOrder } from '@/interfaces/IOrder';
@@ -54,15 +52,6 @@ const Dashboard = () => {
             )}
           </div>
         </div>
-
-        {/* <div className="text-center mt-8">
-          <Link
-            href={PATHROUTES.CART}
-            className="inline-block bg-blue-700 text-white font-bold py-2 px-6 rounded-lg shadow-md hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-          >
-            View Cart
-          </Link>
-        </div> */}
       </div>
     </div>
   );

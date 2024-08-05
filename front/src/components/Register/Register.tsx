@@ -162,17 +162,17 @@ export const Register = () => {
             {errorUser.phone && <p className="text-xs text-red-500 mt-1">{errorUser.phone}</p>}
           </div>
 
-         
+
 
           <div className="flex items-center mb-4">
             <input id="terms" type="checkbox" className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-teal-300" required />
-            <label htmlFor="terms" className="ml-2 text-sm text-gray-500">I agree with the  
+            <label htmlFor="terms" className="ml-2 text-sm text-gray-500">I agree with the
               <a href="#" className="text-teal-900 hover:underline">terms and conditions</a></label>
-              
+
           </div>
 
-          <button type="submit" 
-          className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide transition duration-200 rounded-lg shadow-md bg-blue-600 hover:bg-blue-700 text-white focus:shadow-outline focus:outline-none cursor-pointer">Register</button>
+          <button type="submit"
+            className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide transition duration-200 rounded-lg shadow-md bg-blue-600 hover:bg-blue-700 text-white focus:shadow-outline focus:outline-none cursor-pointer">Register</button>
         </form>
       </div>
     </div>

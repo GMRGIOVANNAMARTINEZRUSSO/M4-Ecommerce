@@ -8,7 +8,6 @@ export const fetchProducts = async () => {
         const response = await fetch(`${apiURL}/products`, {
             method: 'GET',
             cache: 'no-cache',
-            // next: { revalidate: 3600 },
         })
         const products: IProduct[] = await response.json();
         return products;

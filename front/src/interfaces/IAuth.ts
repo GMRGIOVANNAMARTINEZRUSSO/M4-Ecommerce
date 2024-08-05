@@ -6,9 +6,8 @@ export interface LoginProps {
 export interface LoginErrorProps {
     email?: string;
     password?: string;
-}   
+}
 
-// export type LoginErrorProp = Partial<LoginProps>;
 
 export interface RegisterProps {
     name: string;
@@ -25,12 +24,12 @@ export interface userSessionProps {
     login?: boolean;
     token: string;
     user: {
-    email: string;
-    name: string;
-    id: number;
-    address: string;
-    phone: string;
-    role: string;
-    orders: [];
+        email: string;
+        name: string;
+        id: number;
+        address: string;
+        phone: string;
+        role: string;
+        orders: [];
     }
 }

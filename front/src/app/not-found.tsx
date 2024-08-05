@@ -11,7 +11,7 @@ const NotFound = () => {
       router.push(PATHROUTES.HOME);
     }, 5000);
 
-    return () => clearTimeout(timer); // Limpiar el timer si el componente se desmonta
+    return () => clearTimeout(timer);
   }, [router]);
 
   return (

@@ -20,14 +20,12 @@ const Navbar = () => {
     const cart = localStorage.getItem("cart");
     if (cart) {
       const items: IProduct[] = JSON.parse(cart);
-      // setCartItemCount(items.length);
     }
   }, []);
 
   const handleLogout = () => {
     logoutUser();
     document.cookie = "user=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT";
-    // localStorage.removeItem("userSession");
     setDataUser(null);
     router.push(PATHROUTES.HOME);
   };
@@ -78,7 +76,7 @@ const Navbar = () => {
               <li key={"dashboard"} className="flex-1">
                 <Link href={PATHROUTES.DASHBOARD}
                   className="inline-flex items-center font-semibold transition-colors duration-200 rounded-lg text-blue-600 hover:text-blue-800 cursor-pointer">
-                     Profile
+                  Profile
                 </Link>
               </li>
 

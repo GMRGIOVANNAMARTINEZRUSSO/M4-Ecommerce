@@ -98,22 +98,3 @@ const ProductID = ({
 export default ProductID;
 
 
-// export const fetchProductDetail = async (id:number) => {
-//     const response = await fetch(`http://localhost:3000/products`,{
-//         cache: "no-cache",
-//     })
-//   const product = await response.json();
-  
-//   return product[id-1];
-  
-// };
-   
-// export const Product = async({params}: {params: {id: number}}) => {
-//     // const {id,name,price,image} : IProduct =  await fetchProductDetail(params.id);
-// const product = await fetchProductDetail(params.id);
-//     return (
-//         <ProductDetail product={product}/>
-//     )                               
-// }
-
-// export default Product

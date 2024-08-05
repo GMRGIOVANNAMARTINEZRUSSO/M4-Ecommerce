@@ -2,7 +2,7 @@
 import React from 'react';
 import IProduct from '../../interfaces/IProduct';
 
-const ProductDetail  = ({ product }: { product: IProduct}) => {
+const ProductDetail = ({ product }: { product: IProduct }) => {
   return (
     <div className="flex">
       <img className="w-1/2 h-auto rounded-lg shadow-lg" src={product.image} alt={product.name} />
