@@ -35,6 +35,8 @@ const HomeContainer = () => {
               Find the best electronic devices and gadgets at unbeatable prices.
             </p>
           </div>
+
+
           <div className="flex items-center">
             <Link href={PATHROUTES.PRODUCTS}>
               <div className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide transition duration-200 rounded-lg shadow-md bg-blue-600 hover:bg-blue-700 text-white focus:shadow-outline focus:outline-none cursor-pointer">

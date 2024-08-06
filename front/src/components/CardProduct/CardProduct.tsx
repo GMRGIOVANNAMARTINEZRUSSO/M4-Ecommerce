@@ -39,19 +39,14 @@ const CardProduct: React.FC<IProduct> = ({
 
   return (
     <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-      <div className="relative w-full h-48">
-
-        <Image
-          src={image}
-          alt={`Imagen del producto ${name}`}
-          layout="fill"
-          objectFit="cover"
-          className="p-8 rounded-t-lg"
-        />
-        
 
 
+      <div className="relative w-full ">
+        <img src={image} alt={`Imagen del producto ${name}`}
+          className="p-8 rounded-t-lg w-auto h-[17em] inline-block text-center" />
       </div>
+
+
       <div className="px-5 pb-5">
         <Link className="text-lg font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400" href={PATHROUTES.PRODUCTID(id)}> {name} </Link>
         <p className="text-base text-gray-700 md:text-lg">{description}</p>
