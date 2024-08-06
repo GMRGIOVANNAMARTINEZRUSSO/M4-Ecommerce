@@ -69,8 +69,10 @@ const CartPage = () => {
         <div className="flex justify-between items-center mt-8">
           <h2 className="text-lg font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">Total: ${total.toFixed(2)}</h2>
           <button
-            className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide transition duration-200 rounded-lg shadow-md bg-blue-600 hover:bg-blue-700 text-white focus:shadow-outline focus:outline-none cursor-pointer"
-            onClick={handleCheckout}>  Place Order
+            className={`inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide transition duration-200 rounded-lg shadow-md focus:shadow-outline focus:outline-none ${cart.length === 0 ? 'bg-gray-400 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700 text-white cursor-pointer'}`}
+            onClick={handleCheckout}
+            disabled={cart.length === 0}
+          > Place Order
           </button>
 
         </div>

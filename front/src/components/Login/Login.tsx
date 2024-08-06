@@ -27,7 +27,7 @@ export const Login = () => {
       ...userData,
       [event.target.name]: event.target.value,
     });
-  };
+  }
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -38,7 +38,8 @@ export const Login = () => {
       alert('Usuario logeado exitosamente');
       router.push(PATHROUTES.HOME);
     } catch (error: any) {
-      throw new Error(error);
+      console.error('Error logging in user:', error);
+      alert('Hubo un problema al iniciar sesión. Por favor, inténtalo de nuevo.');
     }
   };
 
@@ -58,6 +59,7 @@ export const Login = () => {
           >
             &times;
           </button>
+
           <h1 className="text-2xl font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400 text-center mb-6">Sign in to our platform</h1>
 
           <form onSubmit={handleSubmit}>
@@ -70,7 +72,7 @@ export const Login = () => {
                 value={userData.email}
                 placeholder="user@example.com"
                 onChange={handleChange}
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                className="text-teal-900 placeholder-gray-500 mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                 required
               />
               {errorUser.email && <p className="font-light text-xs text-red-500">{errorUser.email}</p>}
@@ -85,18 +87,20 @@ export const Login = () => {
                 value={userData.password}
                 placeholder="******"
                 onChange={handleChange}
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                className="text-teal-900 placeholder-gray-500 mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                 required
               />
               {errorUser.password && <p className="font-light text-xs text-red-500">{errorUser.password}</p>}
             </div>
 
-            <button type="submit"
-              className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide transition duration-200 rounded-lg shadow-md bg-blue-600 hover:bg-blue-700 text-white focus:shadow-outline focus:outline-none cursor-pointer">
+            <button
+              type="submit"
+              className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide transition duration-200 rounded-lg shadow-md bg-blue-600 hover:bg-blue-700 text-white focus:shadow-outline focus:outline-none cursor-pointer"
+            >
               Login to your account
             </button>
 
-            <p className="text-sm text-gray-500 mt-4">don&apos;t have an account? <Link href={PATHROUTES.REGISTER} className="text-blue-500 hover:underline">Register</Link></p>
+            <p className="text-sm text-gray-500 mt-4">Don't have an account? <Link href={PATHROUTES.REGISTER} className="text-blue-500 hover:underline">Register</Link></p>
           </form>
         </div>
       </div>
@@ -105,4 +109,3 @@ export const Login = () => {
 };
 
 export default Login;
-

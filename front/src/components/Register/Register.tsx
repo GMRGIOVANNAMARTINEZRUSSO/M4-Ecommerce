@@ -67,6 +67,7 @@ export const Register = () => {
         >
           &times;
         </button>
+
         <h2 className="text-xl font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400 mb-4">Register</h2>
 
         <form onSubmit={handleSubmit}>
@@ -79,7 +80,7 @@ export const Register = () => {
               value={userData.email}
               placeholder="user@example.com"
               onChange={handleChange}
-              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm"
+              className="text-teal-900 placeholder-gray-500 mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm"
               required
             />
             {errorUser.email && <p className="text-xs text-red-500 mt-1">{errorUser.email}</p>}
@@ -95,7 +96,7 @@ export const Register = () => {
                 value={userData.password}
                 placeholder="******"
                 onChange={handleChange}
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm"
+                className="text-teal-900 placeholder-gray-500 mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm"
                 required
               />
               {errorUser.password && <p className="text-xs text-red-500 mt-1">{errorUser.password}</p>}
@@ -110,7 +111,7 @@ export const Register = () => {
                 value={userData.confirmPassword}
                 placeholder="******"
                 onChange={handleChange}
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm"
+                className="text-teal-900 placeholder-gray-500 mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm"
                 required
               />
               {errorUser.confirmPassword && <p className="text-xs text-red-500 mt-1">{errorUser.confirmPassword}</p>}
@@ -126,7 +127,7 @@ export const Register = () => {
               value={userData.name}
               placeholder="Juan"
               onChange={handleChange}
-              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm"
+              className="text-teal-900 placeholder-gray-500 mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm"
               required
             />
             {errorUser.name && <p className="text-xs text-red-500 mt-1">{errorUser.name}</p>}
@@ -141,7 +142,7 @@ export const Register = () => {
               value={userData.address}
               placeholder="123 Street"
               onChange={handleChange}
-              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm"
+              className="text-teal-900 placeholder-gray-500 mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm"
               required
             />
             {errorUser.address && <p className="text-xs text-red-500 mt-1">{errorUser.address}</p>}
@@ -150,29 +151,31 @@ export const Register = () => {
           <div className="mb-4">
             <label htmlFor="phone" className="block text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400 mb-2">Phone</label>
             <input
-              type="text"
+              type="number"
               id="phone"
               name="phone"
               value={userData.phone}
               placeholder="1234567890"
               onChange={handleChange}
-              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm"
+              className="text-teal-900 placeholder-gray-500 mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm"
               required
             />
             {errorUser.phone && <p className="text-xs text-red-500 mt-1">{errorUser.phone}</p>}
           </div>
 
-
-
           <div className="flex items-center mb-4">
             <input id="terms" type="checkbox" className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-teal-300" required />
-            <label htmlFor="terms" className="ml-2 text-sm text-gray-500">I agree with the
-              <a href="#" className="text-teal-900 hover:underline">terms and conditions</a></label>
-
+            <label htmlFor="terms" className="ml-2 text-sm text-gray-500">
+              I agree with the <a href="#" className="text-teal-900 hover:underline">terms and conditions</a>
+            </label>
           </div>
 
-          <button type="submit"
-            className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide transition duration-200 rounded-lg shadow-md bg-blue-600 hover:bg-blue-700 text-white focus:shadow-outline focus:outline-none cursor-pointer">Register</button>
+          <button
+            type="submit"
+            className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide transition duration-200 rounded-lg shadow-md bg-blue-600 hover:bg-blue-700 text-white focus:shadow-outline focus:outline-none cursor-pointer"
+          >
+            Register
+          </button>
         </form>
       </div>
     </div>
