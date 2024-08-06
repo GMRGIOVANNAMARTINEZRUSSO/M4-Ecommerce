@@ -15,8 +15,10 @@ export const RegisterUser = async (userData: RegisterProps) => {
         if (response.ok) {
             return response.json();
         } else {
-            alert('Error al registrar el usuario')
-            throw new Error('Error al registrar el usuario');
+            const errorData = await response.json();
+            alert(errorData.message || "User creation error");
+            throw new Error(errorData.message || "User creation error");
+
         }
     } catch (error: any) {
         throw new Error(error);
@@ -36,8 +38,9 @@ export const LoginUser = async (userData: LoginProps) => {
         if (response.ok) {
             return response.json();
         } else {
-            alert('Error al logear el usuario')
-            throw new Error('Error al logear el usuario');
+            const errorData = await response.json();
+            alert(errorData.message || "Error logging in");
+            throw new Error(errorData.message || "Error logging in");
         }
 
     } catch (error: any) {

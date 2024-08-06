@@ -35,11 +35,10 @@ export const Login = () => {
       const response = await LoginUser(userData);
       setDataUser(response);
       document.cookie = `user=admin; path=/;`;
-      alert('Usuario logeado exitosamente');
+      alert('Login successful');
       router.push(PATHROUTES.HOME);
     } catch (error: any) {
       console.error('Error logging in user:', error);
-      alert('Hubo un problema al iniciar sesión. Por favor, inténtalo de nuevo.');
     }
   };
 

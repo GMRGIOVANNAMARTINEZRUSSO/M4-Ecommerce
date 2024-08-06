@@ -49,7 +49,6 @@ export const Register = () => {
       router.push(PATHROUTES.LOGIN);
     } catch (error: any) {
       console.error('Error registering user:', error);
-      alert('There was a problem registering your account. Please try again.');
     }
   };
 
