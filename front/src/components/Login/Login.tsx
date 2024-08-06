@@ -100,7 +100,7 @@ export const Login = () => {
               Login to your account
             </button>
 
-            <p className="text-sm text-gray-500 mt-4">Don't have an account? <Link href={PATHROUTES.REGISTER} className="text-blue-500 hover:underline">Register</Link></p>
+            <p className="text-sm text-gray-500 mt-4">Don&apos;t have an account? <Link href={PATHROUTES.REGISTER} className="text-blue-500 hover:underline">Register</Link></p>
           </form>
         </div>
       </div>
